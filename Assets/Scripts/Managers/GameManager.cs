@@ -28,11 +28,21 @@ public class GameManager : MonoBehaviour
             Destroy(instance.gameObject);
         instance = this;
     }
+
+    private void Update()
+    {
+        if(score >= 1000)
+        {
+            score = 0;
+            SceneManager.LoadScene("OverWorld");
+        }
+    }
     public void NotifyPlayerDeath()
     {
         // save final score then go to game over screen
         finalScore = score;
         SceneManager.LoadScene("GameOver");
+        score = 0;
     }
 
     public void AddScore(int amount)
