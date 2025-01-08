@@ -263,6 +263,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 462871480641368788, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 462871480641368788, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 462871480641368788, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 462871480641368788, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1320138030027247411, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -302,6 +318,58 @@ PrefabInstance:
     - target: {fileID: 1320138030027247411, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842246244496003, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b69abe9c481d3443a79add16cb4d76f, type: 3}
+    - target: {fileID: 1419842246244496003, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842246244496003, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842246244496003, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119000403609070093, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 31b60b7f34584574683c25b5c03a1c83, type: 3}
+    - target: {fileID: 3119000403609070093, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119000403609070093, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119000403609070093, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119000403609070093, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000141305026666434, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9032710bc3936ca449c49f3bc69538c1, type: 3}
+    - target: {fileID: 4000141305026666434, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000141305026666434, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000141305026666434, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7276583064431992343, guid: 56540a66a39062d4fab9cbea928c3716, type: 3}
       propertyPath: m_Name
@@ -739,7 +807,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ec11e8453749d064da05ad7eef41e963, type: 3}
   - {fileID: 21300000, guid: c878ad77b808c084a93801f93890dcbf, type: 3}
   textboxSpeed: 1
-  startSprite: 3
+  startSprite: 0
 --- !u!212 &389243907
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -784,7 +852,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c878ad77b808c084a93801f93890dcbf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f29dd4bb376c4224699e52bd45e6851b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -864,10 +932,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-  - U ok??
-  - I saw the gc\nU good?
-  - Just know that\nI'm ur oomf
-  - And I'll always\nBe there 4 u xoxo
+  - Hey I'm sorry
+  - I should'nt have\nSaid that
+  - Your e-girl is\nActually really cool
+  - Let me know\nIf you wanna talk
+  - See you around
   levelName: level1
   textboxSpeed: 1000
   dialogue: {fileID: 69443048}

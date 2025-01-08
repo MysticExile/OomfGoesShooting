@@ -59,22 +59,22 @@ PrefabInstance:
     - target: {fileID: 7442458116112690153, guid: 03f8f7590d585434891adfc851a6941e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2007148528, guid: 2043e6bff03b8c747a33e72e113fa5b1, type: 3}
+      objectReference: {fileID: 21300000, guid: f06c89514f87830448faf374e1cf5f31, type: 3}
     - target: {fileID: 7628191476058788939, guid: 03f8f7590d585434891adfc851a6941e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7628191476058788939, guid: 03f8f7590d585434891adfc851a6941e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7628191476058788939, guid: 03f8f7590d585434891adfc851a6941e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7628191476058788939, guid: 03f8f7590d585434891adfc851a6941e, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8508229549537775736, guid: 03f8f7590d585434891adfc851a6941e, type: 3}
       propertyPath: pointsScored

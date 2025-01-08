@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI scoreTextObject = null; 
 
     private int score = 0;
+    public string levelName;
 
     [SerializeField]
     private GameObject player = null;
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
         if(score >= 1000)
         {
             score = 0;
-            SceneManager.LoadScene("OverWorld");
+            SceneManager.LoadScene(levelName);
         }
     }
     public void NotifyPlayerDeath()

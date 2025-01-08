@@ -10,7 +10,9 @@ public class Textboxes : MonoBehaviour
     private bool cooldown = true;
     float _interval = 3f;
     float _time;
-    private int lineCounter = 1;
+    private int lineCounter = 0;
+    public string[] script;
+    public string levelName;
 
     public float textboxSpeed;
     public TextMeshProUGUI dialogue;
@@ -49,31 +51,41 @@ public class Textboxes : MonoBehaviour
 
     void GoNext()
     {
-        switch ((lineCounter))
+        if(lineCounter < script.Length)
         {
-            case (1):
-                dialogue.text = "U ok??";
-                lineCounter += 1;
-                break;
-            case (2):
-                dialogue.text = "I saw the gc\nU good?";
-                lineCounter += 1;
-                break;
-            case (3):
-                dialogue.text = "Just know that\nI'm ur oomf";
-                lineCounter += 1;
-                break;
-            case (4):
-                dialogue.text = "And I'll always\nBe there 4 u xoxo";
-                lineCounter += 1;
-                break;
-            case (5):
-                lineCounter += 1;
-                SceneManager.LoadScene("level1");
-                break;
-            default:
-                break;
+            dialogue.text = script[lineCounter];
+            lineCounter += 1;
         }
+        else
+        {
+            lineCounter += 1;
+            SceneManager.LoadScene(levelName);
+        }
+        //switch ((lineCounter))
+        //{
+        //    case (1):
+        //        dialogue.text = "U ok??";
+        //        lineCounter += 1;
+        //        break;
+        //    case (2):
+        //        dialogue.text = "I saw the gc\nU good?";
+        //        lineCounter += 1;
+        //        break;
+        //    case (3):
+        //        dialogue.text = "Just know that\nI'm ur oomf";
+        //        lineCounter += 1;
+        //        break;
+        //    case (4):
+        //        dialogue.text = "And I'll always\nBe there 4 u xoxo";
+        //        lineCounter += 1;
+        //        break;
+        //    case (5):
+        //        lineCounter += 1;
+        //        SceneManager.LoadScene("level1");
+        //        break;
+        //    default:
+        //        break;
+        //}
 
 
     }

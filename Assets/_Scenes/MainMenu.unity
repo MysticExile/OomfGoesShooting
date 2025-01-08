@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52474f280948890418bc6075e1e47da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName0: level1
+  sceneName0: Overworld
   sceneName1: 
   sceneName2: MainMenu
   sceneName3: GameOver
