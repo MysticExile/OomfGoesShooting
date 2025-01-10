@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
 
     private int score = 0;
     public string levelName;
+    public SpriteRenderer spriteRenderer;
+    private float alpha = 0;
+    private float _time;
+    private float _interval = 2.0f;
 
     [SerializeField]
     private GameObject player = null;
@@ -28,14 +32,25 @@ public class GameManager : MonoBehaviour
         if (instance != null)
             Destroy(instance.gameObject);
         instance = this;
+        spriteRenderer.color = new Color(0, 0, 0, alpha);
     }
 
     private void Update()
     {
         if(score >= 1000)
         {
-            score = 0;
-            SceneManager.LoadScene(levelName);
+            _time += Time.deltaTime;
+            while (_time >= _interval)
+            {
+                score = 0;
+                SceneManager.LoadScene(levelName);
+                _time -= _interval;
+            }
+            if (_time < _interval)
+            {
+                alpha += Time.deltaTime;
+                spriteRenderer.color = new Color(0, 0, 0, alpha);
+            }
         }
     }
     public void NotifyPlayerDeath()
@@ -52,6 +67,6 @@ public class GameManager : MonoBehaviour
         score += amount;
 
         if (scoreTextObject != null)
-            scoreTextObject.text = "Score: " + score.ToString();
+            scoreTextObject.text = "Score: " + score.ToString() + "/1000";
     }
 }

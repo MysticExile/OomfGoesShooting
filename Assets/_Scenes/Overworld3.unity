@@ -932,12 +932,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-  - Hey I'm sorry
-  - I should'nt have\nSaid that
-  - Your e-girl is\nActually really cool
-  - Let me know\nIf you wanna talk
-  - See you around
-  levelName: level1
+  - Come back...
+  - We all miss you
+  - Emily, she misses\nyou the most
+  - Come back to us
+  - You belong with us.
+  levelName: level3
   textboxSpeed: 1000
   dialogue: {fileID: 69443048}
 --- !u!114 &923722554
