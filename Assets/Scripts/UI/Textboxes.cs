@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class Textboxes : MonoBehaviour
 {
     private Rigidbody body;
-    private bool alternate = true;
-    private bool cooldown = true;
     float _interval = 3f;
     float _time;
     private int lineCounter = 0;
     public string[] script;
     public string levelName;
+    public Vector2 floatY;
+    public float FloatStrength;
 
     public float textboxSpeed;
     public TextMeshProUGUI dialogue;
@@ -38,18 +38,12 @@ public class Textboxes : MonoBehaviour
 
     void Bobbing()
     {
-        if (body.transform.localPosition.y > 10.0f)
-        {
-            body.AddRelativeForce(0, (-textboxSpeed * Time.deltaTime), 0, ForceMode.Impulse);
-            Debug.Log(body.transform.localPosition.y);
-        }
-        if (body.transform.localPosition.y < -10)
-        {
-            body.AddRelativeForce(0, (textboxSpeed * Time.deltaTime), 0, ForceMode.Impulse);
-        }
+        floatY = transform.position;
+        floatY.y = (Mathf.Sin(Time.time) * FloatStrength + 1050);
+        transform.position = floatY;
     }
 
-    void GoNext()
+    public void GoNext()
     {
         if(lineCounter < script.Length)
         {
@@ -61,32 +55,5 @@ public class Textboxes : MonoBehaviour
             lineCounter += 1;
             SceneManager.LoadScene(levelName);
         }
-        //switch ((lineCounter))
-        //{
-        //    case (1):
-        //        dialogue.text = "U ok??";
-        //        lineCounter += 1;
-        //        break;
-        //    case (2):
-        //        dialogue.text = "I saw the gc\nU good?";
-        //        lineCounter += 1;
-        //        break;
-        //    case (3):
-        //        dialogue.text = "Just know that\nI'm ur oomf";
-        //        lineCounter += 1;
-        //        break;
-        //    case (4):
-        //        dialogue.text = "And I'll always\nBe there 4 u xoxo";
-        //        lineCounter += 1;
-        //        break;
-        //    case (5):
-        //        lineCounter += 1;
-        //        SceneManager.LoadScene("level1");
-        //        break;
-        //    default:
-        //        break;
-        //}
-
-
     }
 }

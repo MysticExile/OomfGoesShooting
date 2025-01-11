@@ -18,9 +18,12 @@ public class GameManager : MonoBehaviour
     private int score = 0;
     public string levelName;
     public SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer1;
     private float alpha = 0;
+    private float color = 0;
     private float _time;
     private float _interval = 2.0f;
+    private bool isPaused;
 
     [SerializeField]
     private GameObject player = null;
@@ -39,18 +42,12 @@ public class GameManager : MonoBehaviour
     {
         if(score >= 1000)
         {
-            _time += Time.deltaTime;
-            while (_time >= _interval)
-            {
-                score = 0;
-                SceneManager.LoadScene(levelName);
-                _time -= _interval;
-            }
-            if (_time < _interval)
-            {
-                alpha += Time.deltaTime;
-                spriteRenderer.color = new Color(0, 0, 0, alpha);
-            }
+            FadeToBlack();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
         }
     }
     public void NotifyPlayerDeath()
@@ -68,5 +65,31 @@ public class GameManager : MonoBehaviour
 
         if (scoreTextObject != null)
             scoreTextObject.text = "Score: " + score.ToString() + "/1000";
+    }
+
+    private void FadeToBlack()
+    {
+        _time += Time.deltaTime;
+        while (_time >= _interval)
+        {
+            score = 0;
+            SceneManager.LoadScene(levelName);
+            _time -= _interval;
+        }
+        if (_time < _interval)
+        {
+            alpha += Time.deltaTime;
+            spriteRenderer.color = new Color(0, 0, 0, alpha);
+        }
+    }
+
+
+    private void PauseGame()
+    {
+
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0 : 1;
+        color = isPaused ? 255 : 0;
+        spriteRenderer1.color = new Color(color, color, color, color);
     }
 }

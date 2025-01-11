@@ -7,7 +7,8 @@ public class PlayerAnimation : MonoBehaviour
     public Sprite[] sprites;
     float _interval = 0.15f;
     float _time;
-    public float textboxSpeed;
+    public Vector3 floatZ;
+    public float FloatStrength;
     public int startSprite;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,10 +32,18 @@ public class PlayerAnimation : MonoBehaviour
             }
             _time -= _interval;
         }
+        Bobbing();
     }
 
     public void ChangeEmote(int emote)
     {
         spriteRenderer.sprite = sprites[emote];
+    }
+
+    void Bobbing()
+    {
+        floatZ = transform.position;
+        floatZ.z = (Mathf.Sin(Time.time) * FloatStrength);
+        transform.position = floatZ;
     }
 }
